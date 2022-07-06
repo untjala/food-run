@@ -1,18 +1,22 @@
 [
   {
-    "playerName": "Flash",
-    "Score": "4000"
+    "username": "Flash",
+    "score_id": "4000",
+    "password": "1234"
   },
   {
-    "playerName": "Sonic",
-    "Score": "5000"
+    "username": "Sonic",
+    "score_id": "5000",
+    "password": "1237"
   },
   {
-    "playerName": "Burter",
-    "Score": "3000"
+    "username": "Burter",
+    "score_id": "3000",
+    "password": "1238"
   },
   {
-    "playerName": "Roadrunner",
-    "Score": "4300"
+    "username": "Roadrunner",
+    "score_id": "4300",
+    "password": "1236"
   }
 ]

@@ -13,10 +13,10 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const player = playerData.map((player) => player.get({ plain: true }));
+    const players = playerData.map((player) => player.get({ plain: true }));
 
-    res.render('startPage', {
-      posts,
+    res.render('index', {
+      players,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -34,8 +34,8 @@ router.get('/', withAuth, async (req, res) => {
 
     const player = playerData.get({ plain: true });
 
-    res.render('startPage', {
-      user,
+    res.render('index', {
+      player,
       loggedIn: true,
     });
   } catch (err) {
