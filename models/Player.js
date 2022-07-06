@@ -1,10 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-<<<<<<< HEAD
-
-
-module.exports = Project;
-=======
 const bcrypt = require('bcrypt');
 
 class Player extends Model {
@@ -52,4 +47,3 @@ Player.init(
 );
 
 module.exports = Player;
->>>>>>> 09346031ec79804218c910a5aee8f911b75eead0
