@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Game, Player} = require('../models');
+const {Player} = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const posts = playerData.map((player) => player.get({ plain: true }));
+    const player = playerData.map((player) => player.get({ plain: true }));
 
     res.render('startPage', {
       posts,
@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
 
 router.get('/', withAuth, async (req, res) => {
   try {
-    const playerData = Player.findByPk(req.session.user_id, {
+    const playerData = Player.findByPk(req.session.player_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: [Player] }],
     });
@@ -35,7 +35,7 @@ router.get('/', withAuth, async (req, res) => {
     const player = playerData.get({ plain: true });
 
     res.render('startPage', {
-      player,
+      user,
       loggedIn: true,
     });
   } catch (err) {
