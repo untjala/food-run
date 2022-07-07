@@ -28,11 +28,12 @@ const signupFormHandler = async (event) => {
   if (username && password) {
     const response = await fetch('/api/players', {
       method: 'POST',
-      body: JSON.stringify(JSON.parse({ username, password })),
+      body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
+      console.log(response);
       document.location.replace('/');
     } else {
       alert('Failed to sign up!');
@@ -41,9 +42,9 @@ const signupFormHandler = async (event) => {
 };
 
 document
-  .querySelector('#login-form')
+  .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
 
 document
-  .querySelector('#signup-form')
+  .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);

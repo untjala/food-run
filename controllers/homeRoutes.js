@@ -32,7 +32,7 @@ router.get('/:id', /*withAuth,*/ async (req, res) => {
 
     const player = playerData.get({ plain: true });
 
-    res.render('main', {
+    res.render('index', {
       player,
       loggedIn: true,
     });
