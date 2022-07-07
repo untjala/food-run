@@ -1,2 +1,26 @@
-{{!-- Commented out so we don't mess something up before we're ready to link things up --}}
-<h1></h1>
+<div class="container">
+
+  <header class="centeredup">Food Run</header>
+
+  <!-- starting button -->
+  <div class="button1">
+    <button class="centeredL startButton">START</button>
+    <button class="centeredR" onclick="toggleLogin()">LOGIN</button>
+  </div>
+
+  {{> login}}
+
+  <!-- the player -->
+  <div class="character">
+    <img class="bottomLeft" src="/img/playerRun.png" alt="player" />
+  </div>
+</div>
+
+<script>
+  function toggleLogin() {
+    document.querySelector(".overlay").classList.toggle("open");
+  }
+  function toggleExit() {
+    document.querySelector(".overlay").classList.remove("open");
+  }
+</script>
