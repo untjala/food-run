@@ -1,5 +1,6 @@
 header{
     font-size: xx-large;
+    font-weight: bold;
 }
 
 body {
@@ -35,3 +36,6 @@ body {
     bottom: 10px;
     left: 16px;
   }
+  @media screen and (orientation:landscape) {
+    /* // CSS applied when the device is in landscape mode */
+}
