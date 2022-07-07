@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Player} = require('../models');
+const { Player } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 
     const players = playerData.map((player) => player.get({ plain: true }));
 
-    res.render('index', {
+    res.render('main', {
       players,
       loggedIn: req.session.loggedIn,
     });
@@ -25,19 +25,42 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   try {
     const playerData = Player.findByPk(req.session.player_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: [Player] }],
+      include: [
+        {
+          model: [Player],
+          attributes: 'player_id',
+        },
+      ],
     });
 
     const player = playerData.get({ plain: true });
 
-    res.render('index', {
+    res.render('main', {
       player,
       loggedIn: true,
     });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.post('/', async (req, res) => {
+  try {
+    const playerData = await Player.create({
+      username: req.body.username,
+      password: req.body.password,
+    });
+
+    req.session.save(() => {
+      req.session.user_id = playerData.id;
+      req.session.username = playerData.username;
+      req.session.loggedIn = true;
+    });
+    res.status(200).json(playerData);
   } catch (err) {
     res.status(500).json(err);
   }

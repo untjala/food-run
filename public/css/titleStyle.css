@@ -60,7 +60,7 @@ body {
     font-size: 15px;
     padding: 10px;
     min-width: 20px;
-    top: 72%;
+    top: 88%;
     left: 50%;
     transform: translateX(-50%);
     background: #000051;
@@ -121,7 +121,7 @@ body {
     color: #000051;
   }
   
-  .body .form input {
+  .login-form .form .signup-form input {
     display: block;
     padding: 10px;
     margin: 25px 10px;
@@ -131,7 +131,7 @@ body {
     transition: 0.4s;
   }
   
-  .body .form input:focus {
+  .login-form .form .signup-form input:focus {
     border-color: #534bae;
   }
   

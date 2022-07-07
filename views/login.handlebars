@@ -1,0 +1,39 @@
+<div class="center">
+    <button class="centeredR" onclick="toggleLogin()">LOGIN</button>
+    <div class="overlay">
+        <div class="close">
+            <button onclick="toggleExit()">Cancel</button>
+        </div>
+        <div class="login">
+            <div class="header">
+                <h1>Login</h1>
+                <i class="fas fa-times" onclick="toggleLogin()"></i>
+            </div>
+            <div class="body">
+                <form action="#" class="form">
+                    <label for="username-login"></label>
+                    <input type="text" placeholder="username" />
+                    <label for="password-login"></label>
+                    <input type="password" placeholder="Password" />
+                </form>
+            </div>
+            <div class="header">
+                <h1>Signup</h1>
+                <i class="fas fa-times" onclick="toggleLogin()"></i>
+            </div>
+            <div class="body">
+                <form action="#" class="form">
+                    <label for="username-signup"></label>
+                    <input type="text" placeholder="username-signup" />
+                    <label for="password-signup"></label>
+                    <input type="password" placeholder="Password-signup" />
+                </form>
+            </div>
+            <div class="footer">
+                <button>Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../public/js/login.js"></script>

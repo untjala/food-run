@@ -7,6 +7,7 @@ Game.hasMany(Player, {
 
 Player.belongsTo(Game, {
   foreignKey: 'player_id',
+  onDelete: 'CASCADE'
 });
 
 module.exports = { Game, Player };
