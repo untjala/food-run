@@ -28,7 +28,7 @@ const signupFormHandler = async (event) => {
   if (username && password) {
     const response = await fetch('/api/players', {
       method: 'POST',
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify(JSON.parse({ username, password })),
       headers: { 'Content-Type': 'application/json' },
     });
 
@@ -41,9 +41,9 @@ const signupFormHandler = async (event) => {
 };
 
 document
-  .querySelector('.form')
+  .querySelector('#login-form')
   .addEventListener('submit', loginFormHandler);
 
 document
-  .querySelector('.signup-form')
+  .querySelector('#signup-form')
   .addEventListener('submit', signupFormHandler);
