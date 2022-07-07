@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Game</title>
-    <link rel="stylesheet" href="./titleStyle.css">
+    <link rel="stylesheet" href="../public/css/titleStyle.css">
 </head>
 <body>
     <div class="container" >
@@ -19,12 +19,44 @@
         <!-- starting button -->
         <div class="button1">
             <button class="centeredL startButton">START</button>
-            <button class="centeredR loginButton">LOGIN</button>
+            <div class="center">
+                <button class="centeredR" onclick="toggleLogin()">LOGIN</button>
+                <div class="overlay">
+                    <div class="close">
+                    <button onclick="toggleExit()">Cancel</button>
+                </div>
+                    <div class="login">
+                        <div class="header">
+                            <h1>Login</h1>
+                            <i class="fas fa-times" onclick="toggleLogin()"></i>
+                        </div>
+                        <div class="body">
+                            <form action="#" class="form">
+                                <input type="text" placeholder="username"/>
+                                <input type="password" placeholder="Password"/>
+                            </form>
+                        </div>
+                        <div class="footer">
+                            <button>Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- the player -->
         <div class="character">
-            <img class="bottomLeft" src="./img/playerRun.png" alt="player" >
+            <img class="bottomLeft" src="../img/playerRun.png" alt="player">
         </div>
     </div>
-    </body>
+</body>
+
 </html>
+
+<script>
+    function toggleLogin() {
+        document.querySelector(".overlay").classList.toggle("open");
+    }
+    function toggleExit() {
+        document.querySelector(".overlay").classList.remove("open");
+    }
+</script>
