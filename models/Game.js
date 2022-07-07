@@ -13,6 +13,7 @@ Game.init(
     },
     player_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'player',
         key: 'id',

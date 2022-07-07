@@ -1,16 +1,42 @@
-{{!-- Commented out so we don't mess something up before we're ready to link things up --}}
-{{!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Run</title>
+  <title>Food Game</title>
+  <link rel="stylesheet" href="../public/css/titleStyle.css">
 </head>
 
 <body>
-  {{{body}}}
+  <div class="container">
+
+
+
+    <!-- <img class="background" src="./img/hills.png" alt="startingImage"> -->
+    <header class="centeredup">Food Run</header>
+
+
+    <!-- starting button -->
+    <div class="button1">
+      <button class="centeredL startButton">START</button>
+    </div>
+    {{{body}}}
+    <!-- the player -->
+    <div class="character">
+      <img class="bottomLeft" src="../img/playerRun.png" alt="player">
+    </div>
+  </div>
 </body>
 
-</html> --}}
+</html>
+
+<script>
+  function toggleLogin() {
+    document.querySelector(".overlay").classList.toggle("open");
+  }
+  function toggleExit() {
+    document.querySelector(".overlay").classList.remove("open");
+  }
+</script>
