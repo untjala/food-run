@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seed": "node seeds/seed.js",
-    "db:create": "node config/init.js"
+    "db:create": "node config/init.js",
+    "lint": "npx eslint **/*.js",
+    "lint:fix": "npx eslint **/*.js --fix"
   },
   "keywords": [],
   "author": "",

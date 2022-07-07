@@ -22,7 +22,6 @@
     "no-multi-spaces": "error",
     "no-mixed-spaces-and-tabs": "error",
     "no-trailing-spaces": "error",
-    "default-case": "error",
     "no-fallthrough": "error",
     "no-unused-vars": "error",
     "no-use-before-define": "error",
