@@ -6,7 +6,7 @@ router.post('/', async (req, res) => {
     const gameData = await Game.create(req.body);
 
     req.session.save(() => {
-      req.session.player_id = playerData.id;
+      req.session.player_id = gameData.player_id;
       req.session.loggedIn = true;
 
       res.status(200).json(gameData);

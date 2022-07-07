@@ -4,18 +4,11 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    const playerData = await Player.findAll({
-      include: [
-        {
-          model: Player,
-          attributes: ['username'],
-        },
-      ],
-    });
+    const playerData = await Player.findAll();
 
     const players = playerData.map((player) => player.get({ plain: true }));
 
-    res.render('main', {
+    res.render('index', {
       players,
       loggedIn: req.session.loggedIn,
     });
