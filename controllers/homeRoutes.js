@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
 
     const players = playerData.map((player) => player.get({ plain: true }));
 
-    console.log('SESSSION', req.session);
+    console.log('SESSION', req.session);
     res.render('index', {
       players,
       loggedIn: req.session.loggedIn,
