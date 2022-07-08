@@ -44,10 +44,10 @@ class Char {
     if (this.position.y + this.height + this.velocity.y <= canvas.height) {
       this.velocity.y += gravity;
       counter++;
-      score.innerHTML = Math.floor(counter / 10);
+      // score = Math.floor(counter / 10);
       //Otherwise, the char has reached the bottom, so velocity should be zero
     } else {
-      score.innerHTML = Math.floor(counter / 100);
+      // score = Math.floor(counter / 100);
       this.velocity.y = 1;
       counter = 0;
       window.location.replace('/endScreen.html');
