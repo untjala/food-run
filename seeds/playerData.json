@@ -1,22 +1,22 @@
 [
   {
     "username": "Flash",
-    "score_id": "4000",
+    "score": "4000",
     "password": "1234"
   },
   {
     "username": "Sonic",
-    "score_id": "5000",
+    "score": "5000",
     "password": "1237"
   },
   {
     "username": "Burter",
-    "score_id": "3000",
+    "score": "3000",
     "password": "1238"
   },
   {
     "username": "Roadrunner",
-    "score_id": "4300",
+    "score": "4300",
     "password": "1236"
   }
 ]

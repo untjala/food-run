@@ -13,8 +13,9 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       document.location.replace('/');
+      //   console.log('logged in!');
     } else {
-      res.status(500).json({ message: 'Invalid Username or Password!' });
+      console.log('Invalid Username or Password!');
     }
   }
 };

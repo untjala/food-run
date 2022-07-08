@@ -2,14 +2,18 @@
 
   <header class="centeredup">Food Run</header>
 
+
+
+  {{#if loggedIn}}
   <!-- starting button -->
   <div class="button1">
-    <button class="centeredL startButton">START</button>
-    <button class="centeredR" onclick="toggleLogin()">LOGIN</button>
+    <a class="centeredL startButton" href="/game">START</a>
   </div>
+  {{else}}
 
+  <button class="centeredR" onclick="toggleLogin()">LOGIN</button>
   {{> login}}
-  {{> game }}
+  {{/if}}
 
   <!-- the player -->
   <div class="character">
@@ -18,10 +22,20 @@
 </div>
 
 <script>
+  const overlayEl = document.querySelector(".overlay");
+  const canvasEl = document.querySelector("#canvas");
+  const containerEl = document.querySelector(".container");
+  const endScreenEl = document.querySelector(".endscreen");
+
   function toggleLogin() {
-    document.querySelector(".overlay").classList.toggle("open");
+    if (overlayEl) overlayEl.classList.toggle("open");
   }
   function toggleExit() {
-    document.querySelector(".overlay").classList.remove("open");
+    if (overlayEl) overlayEl.classList.remove("open");
+  }
+  function toggleScreen() {
+    if (canvasEl) canvasEl.style.display = null;
+    if (containerEl) containerEl.style.display = 'none';
+    if (endScreenEl) endScreenEl.style.display = 'none';
   }
 </script>

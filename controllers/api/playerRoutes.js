@@ -1,49 +1,25 @@
 const router = require('express').Router();
 const { Player } = require('../../models');
 
-router.get('/', async (req, res) => {
-  try {
-    const playerData = await Player.findAll({
-      attributes: { exclude: ['password'] },
-    });
-    res.status(200).json(playerData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get('/:id', async (req, res) => {
-  try {
-    const playerData = await Player.findOne({
-      attributes: { exclude: ['password'] },
-      where: {
-        id: req.params.id,
-      }
-    });
-
-    if (!playerData) {
-      res.status(404).json({ message: 'No player matching this id!' });
-      return;
-    } res.status(200).json(playerData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 router.post('/', async (req, res) => {
   try {
-    const playerData = await Player.create({
-      username: req.body.username,
-      password: req.body.password,
-    });
+
+    const playerData = await Player.create(req.body);
+
+    console.log(playerData);
+
+    const player = JSON.parse(JSON.stringify(playerData));
+
+    console.log(player);
 
     req.session.save(() => {
-      req.session.player_id = playerData.id;
-      req.session.username = playerData.username;
+      req.session.player_id = player.id;
+      req.session.username = player.username;
       req.session.loggedIn = true;
+      res.status(200).json(player);
     });
-    res.status(200).json(playerData);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -70,10 +46,10 @@ router.post('/login', async (req, res) => {
       req.session.player_id = playerData.id;
       req.session.username = playerData.username;
       req.session.loggedIn = true;
+      res.json({ message: 'You are now logged in!' });
     });
-
-    res.json({ message: 'You are now logged in!' });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });

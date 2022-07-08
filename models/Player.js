@@ -19,6 +19,7 @@ Player.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     password: {
       type: DataTypes.STRING,
@@ -27,9 +28,9 @@ Player.init(
         len: [4],
       },
     },
-    score_id: {
+    score: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
   },
   {

@@ -1,25 +1,29 @@
+<link rel="stylesheet" href="/css/endStyle.css">
+<link href="http://fonts.cdnfonts.com/css/games" rel="stylesheet">
 
-<div class="score-card">
-  <div class="score-card-header">
-    <p>
-      {{player.score_id}}
-    </p>
+<section class="endScreen">
+  <div class="score-card">
+    <div class="score-card-header">
+      <p>
+        {{player.score_id}}
+      </p>
+    </div>
+    <div class="card-body">
+      <p>
+        Player:
+        {{player.username}}
+      </p>
+    </div>
   </div>
-  <div class="card-body">
-    <p>
-      Player:
-      {{player.username}}
-    </p>
+  <div>
+
+    <header>YOUR SCORE IS: 00 </header>
+    <header>GAME OVER</header>
   </div>
-</div>
-<div>
 
-  <header>YOUR SCORE IS: 00 </header>
-  <header>GAME OVER</header>
-</div>
-
-<div class="character">
-  <img class="bottomLeft" src="/img/charCrouchpng.png" alt="player" />
-</div>
-<button class="restartButton">Restart</button>
-<button class="leaderBoard">Top Scores</button>
+  <div class="character">
+    <img class="bottomLeft" src="/img/charCrouchpng.png" alt="player" />
+  </div>
+  <button class="restartButton">Restart</button>
+  <button class="leaderBoard">Top Scores</button>
+</section>
