@@ -49,8 +49,8 @@ class Char {
       this.velocity.y += gravity;
       //Otherwise, the char has reached the bottom, so velocity should be zero
     } else {
-      // this.velocity.y = 0
-      alert('GAME OVER');
+      this.velocity.y = 0;
+      // alert('GAME OVER')
     }
   }
 }
@@ -61,8 +61,8 @@ class Platform {
       x,
       y,
     };
-    this.width = 200;
-    this.height = 20;
+    this.width = 100;
+    this.height = 25;
   }
   draw() {
     const base_image = new Image();
@@ -121,7 +121,7 @@ const platforms = [
   }),
 ];
 //Junk powerups
-class junkFood {
+class JunkFood {
   constructor({ x, y }) {
     this.position = {
       x,
@@ -143,22 +143,14 @@ class junkFood {
   }
 }
 
-// junkFood.forEach(junkFood => {
-//     if (char.position.y + char.height <= junkFood.position.y
-//         && char.position.y + char.height + char.velocity.y >= junkFood.position.y
-//         && char.position.x + char.width >= junkFood.position.x
-//         && char.position.x <= junkFood.position.x + junkFood.width) {
-//         char.velocity.y = -5
-//     }
-// })
 const junkFoods = [
-  new junkFood({
+  new JunkFood({
     x: 450,
     y: 565,
   }),
 ];
 //Healthy powerups
-class healthFood {
+class HealthFood {
   constructor({ x, y }) {
     this.position = {
       x,
@@ -180,21 +172,14 @@ class healthFood {
   }
 }
 
-// junkFood.forEach(healthFood => {
-//     if (char.position.y + char.height <= healthFood.position.y
-//         && char.position.y + char.height + char.velocity.y >= healthFood.position.y
-//         && char.position.x + char.width >= healthFood.position.x
-//         && char.position.x <= healthFood.position.x + healthFood.width) {
-//         char.velocity.y = +5
-//     }
-// })
 const healthFoods = [
-  new healthFood({
-    x: 850,
-    y: 385,
+  new HealthFood({
+    x: 1150,
+    y: 800,
   }),
 ];
 //Controls left and right keys--moves player when down, stops player when up
+
 const keys = {
   right: {
     pressed: false,
@@ -223,20 +208,30 @@ function animate() {
   if (keys.right.pressed && char.position.x < 2000) {
     char.velocity.x = 5;
     bgPosX += -5;
-    console.log('POS X', bgPosX);
     playArea.style.backgroundPosition = `${bgPosX}px`;
     scrollLimit += 5;
     platforms.forEach((platform) => {
       platform.position.x -= 5;
     });
+    healthFoods.forEach((healthFood) => {
+      healthFood.position.x -= 5;
+    });
+    junkFoods.forEach((junkFood) => {
+      junkFood.position.x -= 5;
+    });
   } else if (keys.left.pressed && char.position.x > 0) {
     char.velocity.x = -5;
     bgPosX += 5;
-    console.log('POS X', bgPosX);
     playArea.style.backgroundPosition = `${bgPosX}px`;
     scrollLimit -= 5;
     platforms.forEach((platform) => {
       platform.position.x += 5;
+    });
+    healthFoods.forEach((healthFood) => {
+      healthFood.position.x += 5;
+    });
+    junkFoods.forEach((junkFood) => {
+      junkFood.position.x += 5;
     });
   } else {
     char.velocity.x = 0;
@@ -256,6 +251,25 @@ function animate() {
     console.log('Winner');
   }
 }
+healthFoods.forEach((healthFoods) => {
+  if (
+    char.position.y &&
+    char.position.x === healthFoods.position.y &&
+    healthFoods.position.x
+  ) {
+    alert('oh no');
+  }
+});
+junkFoods.forEach((junkFood) => {
+  if (
+    char.position.y + char.height <= junkFood.position.y &&
+    char.position.y + char.height + char.velocity.y >= junkFood.position.y &&
+    char.position.x + char.width >= junkFood.position.x &&
+    char.position.x <= junkFood.position.x + junkFood.width
+  ) {
+    char.velocity.y = -1000;
+  }
+});
 animate();
 
 //Event listeners--allows char movement based on key presses
