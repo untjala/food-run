@@ -24,7 +24,7 @@ class Char {
   //Draws char onto the canvas at the correct position
   draw() {
     const base_image = new Image();
-    base_image.src = './assets/player.png';
+    base_image.src = '/assets/player.png';
     ctx.drawImage(
       base_image,
       this.position.x,
@@ -66,7 +66,7 @@ class Platform {
   }
   draw() {
     const base_image = new Image();
-    base_image.src = './assets/platform.png';
+    base_image.src = '/assets/platform.png';
     ctx.drawImage(
       base_image,
       this.position.x,
@@ -132,7 +132,7 @@ class JunkFood {
   }
   draw() {
     const base_image = new Image();
-    base_image.src = './assets/cake.png';
+    base_image.src = '/assets/cake.png';
     ctx.drawImage(
       base_image,
       this.position.x,
@@ -161,7 +161,7 @@ class HealthFood {
   }
   draw() {
     const base_image = new Image();
-    base_image.src = './assets/eggs.png';
+    base_image.src = '/assets/eggs.png';
     ctx.drawImage(
       base_image,
       this.position.x,

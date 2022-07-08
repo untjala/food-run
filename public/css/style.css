@@ -13,7 +13,7 @@ body div {
   left: 0;
   height: 100%;
   width: 300%;
-  background-image: url('./assets/city.png');
+  background-image: url('/assets/city.png');
   background-attachment: fixed;
   background-position: left;
   background-size: cover;

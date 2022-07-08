@@ -54,7 +54,18 @@ body {
   }
 
   /*login popup styling starts here*/
-
+  .startButton {
+    font-size: 15px;
+    padding: 10px;
+    min-width: 20px;
+    background:white ;
+    border: none;
+    color: #000051;
+    cursor: pointer;
+    transition: 0.4s;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
   .close button {
     position: absolute;
     font-size: 15px;

@@ -1,21 +1,5 @@
 const router = require('express').Router();
-const { Game, Player } = require('../../models');
-
-router.get('/', async (req, res) => {
-  try {
-    const gameData = await Player.findAll();
-
-    const game = gameData.map((game) => game.get({ plain: true }));
-
-    res.render('login', {
-      game,
-      loggedIn: req.session.loggedIn,
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
+const { Game } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
@@ -23,8 +7,6 @@ router.post('/', async (req, res) => {
 
     req.session.save(() => {
       req.session.player_id = gameData.player_id;
-      req.session.loggedIn = true;
-
       res.status(200).json(gameData);
     });
   } catch (err) {
