@@ -50,7 +50,8 @@ class Char {
       // score = Math.floor(counter / 100);
       this.velocity.y = 1;
       counter = 0;
-      window.location.replace('/endScreen.html');
+      window.location.replace('/end');
+      // window.location.replace('/game');
     }
   }
 }
@@ -289,7 +290,7 @@ function animate() {
 
   if (scrollLimit > 3400) {
     console.log(scrollLimit);
-    window.location.replace('/endScreen.html');
+    // window.location.replace('/endScreen.html');
   }
 }
 junkFoods.forEach((junkFood) => {
