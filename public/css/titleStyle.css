@@ -1,10 +1,15 @@
+
+*{
+  font-family: 'Press Start 2P', cursive;
+
+}
 header{
     font-size: xx-large;
     font-weight: bold;
 }
 
 body {
-    background-image: url(../img/hills.png);
+    background-image: url(/assets/City.png);
     background-repeat: no-repeat;
     height: 100vh;
     background-size: cover;
@@ -60,13 +65,13 @@ body {
     min-width: 20px;
     background:white ;
     border: none;
-    color: #000051;
+    color: limegreen;
     cursor: pointer;
     transition: 0.4s;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
   }
-  .close button {
+  /* .close button {
     position: absolute;
     font-size: 15px;
     padding: 10px;
@@ -74,12 +79,12 @@ body {
     top: 88%;
     left: 50%;
     transform: translateX(-50%);
-    background: #000051;
+    background: limegreen;
     border: none;
     color: white;
     cursor: pointer;
     transition: 0.4s;
-  }
+  } */
 
   .overlay {
     position: fixed;
@@ -90,6 +95,7 @@ body {
     width: 100%;
     background: rgba(0, 0, 0, 0.2);
     z-index: 100;
+    overflow: hidden;
   }
   
   .overlay.open {
@@ -108,7 +114,7 @@ body {
   
   .login {
     padding: 50px 25px;
-    background: rgb(0, 0, 0);
+    background: rgba(189,195,199);
     border-radius: 10px;
   }
   
@@ -118,10 +124,10 @@ body {
   
   .header h1 {
     text-align: center;
-    text-transform: uppercase;
-    color: #000051;
+    /* text-transform: uppercase; */
+    color: black;
     padding-bottom: 7px;
-    border-bottom: 2px solid #000051;
+    border-bottom: 2px solid whitesmoke;
   }
   
   .header i {
@@ -129,7 +135,7 @@ body {
     top: 0;
     right: 0;
     font-size: 20px;
-    color: #000051;
+    color: black;
   }
   
   .login-form .form .signup-form input {
@@ -137,9 +143,10 @@ body {
     padding: 10px;
     margin: 25px 10px;
     outline: none;
-    border: solid #000051 1px;
-    color: #000051;
+    border: solid black 1px;
+    color: limegreen;
     transition: 0.4s;
+    opacity: 50%;
   }
   
   .login-form .form .signup-form input:focus {
@@ -149,6 +156,7 @@ body {
   .footer {
     position: relative;
     height: 40px;
+    padding: 10px;
     width: 100%;
   }
   
@@ -158,13 +166,22 @@ body {
     min-width: 100px;
     left: 50%;
     transform: translateX(-50%);
-    background: #000051;
+    background: rgb(27, 111, 160);
     border: none;
     color: white;
     cursor: pointer;
     transition: 0.4s;
   }
   
+ .sign-btn {
+  
+  padding: 50px;
+  color: limegreen;
+ }
+ .end-btn {
+  padding: 50px;
+  
+ }
   .footer button:hover {
     background: #534bae;
   }
@@ -172,6 +189,7 @@ body {
   .close button:hover {
     background: #534bae;
   }
+  
 
   @media screen and (orientation:landscape) {
     /* // CSS applied when the device is in landscape mode */

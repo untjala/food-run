@@ -1,12 +1,12 @@
 <div class="center">
   <div class="overlay">
     <div class="close">
-      <button onclick="toggleExit()">Cancel</button>
+
     </div>
     <div class="login">
       <div class="header">
         <h1>Login</h1>
-        <i class="fas fa-times" onclick="toggleLogin()"></i>
+        {{! <i class="fas fa-times" onclick="toggleLogin()"></i> }}
       </div>
 
       <form class="form login-form" id="login-form">
@@ -24,24 +24,35 @@
       </form>
 
       <div class="header">
-        <h1>Sign-up</h1>
-        <i class="fas fa-times" onclick="toggleLogin()"></i>
+        <h1>SIGN UP</h1>
+        {{! <i class="fas fa-times" onclick="toggleLogin()"></i> }}
       </div>
 
       <form class="form signup-form" id="signup-form">
         <div class="body">
           <form action="#" class="form">
             <label for="username-signup"></label>
-            <input type="text" id="username-signup" placeholder="username-signup" />
+            <input
+              type="text"
+              id="username-signup"
+              placeholder="username-signup"
+            />
             <label for="password-signup"></label>
-            <input type="password" id="password-signup" placeholder="Password-signup" />
+            <input
+              type="password"
+              id="password-signup"
+              placeholder="Password-signup"
+            />
             <div class="footer">
-              <button type="submit">Sign-Up!</button>
+              <button class="sign-btn" type="submit">Sign-Up!</button>
+            
+                
+              </div>
+              <button class= "exit-btn" onclick="toggleExit()">Cancel</button>
             </div>
           </form>
         </div>
       </form>
-
 
     </div>
   </div>
