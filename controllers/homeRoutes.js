@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
     });
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.status(500).send('500 Error');
   }
 });
 
@@ -24,6 +24,26 @@ router.get('/game', async (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
+  }
+});
+
+router.get('/end', async (req, res) => {
+  try {
+    res.render('end', { layout: false, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.post('/end', async (req, res) => {
+  try {
+    const playerData = await Player.create({
+      username: req.body.username,
+    });
+    res.status(200).json(playerData);
+  } catch (err) {
+    res.status(400).json(err);
   }
 });
 
@@ -43,7 +63,7 @@ router.get('/:id', async (req, res) => {
 
     res.render('index', {
       player,
-      loggedIn: req.session.loggedIn
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     res.status(500).json(err);
