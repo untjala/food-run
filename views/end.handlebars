@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EndScreen</title>
-    <link rel="stylesheet" href="/css/endStyle.css">
-    <link href="http://fonts.cdnfonts.com/css/games" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EndScreen</title>
+  <link rel="stylesheet" href="/css/endStyle.css">
+  <link href="http://fonts.cdnfonts.com/css/games" rel="stylesheet">
 </head>
 
-<section class="endScreen">
-  <div class="score-card">
-    <div class="score-card-header">
-      <p>
-        {{player.score_id}}
-      </p>
+<body>
+  <section class="endScreen">
+    <div class="score-card">
+      <div class="score-card-header">
+        <p>
+        </p>
+      </div>
+      <div class="card-body">
+        <p>
+          Player:
+          {{username}}
+        </p>
+      </div>
     </div>
-    <div class="card-body">
-      <p>
-        Player:
-        {{player.username}}
-      </p>
+    <div>
+
+      <header>YOUR SCORE IS: 00 </header>
+      <header>GAME OVER</header>
     </div>
-  </div>
-  <div>
 
-    <header>YOUR SCORE IS: 00 </header>
-    <header>GAME OVER</header>
-  </div>
+    <div class="character">
+      <img class="bottomLeft" src="/img/charCrouchpng.png" alt="player"/>
+    </div>
 
-  <div class="character">
-    <img class="bottomLeft" src="/img/charCrouchpng.png" alt="player" />
-  </div>
-
-  <button class="restartButton">Restart
-    <a class="centeredL restartButton" href="/game">START</a>
-  </button>
-  <button class="leaderBoard">Top Scores</button>
-</section>
+    <button class="restartButton">Restart
+      <a class="centeredL restartButton" href="/game"></a>
+    </button>
+    <button class="leaderBoard">Top Scores</button>
+  </section>
+</body>
+<script src="/js/index.js"></script>
+</html>
