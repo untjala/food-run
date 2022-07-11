@@ -14,7 +14,7 @@ body div {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 300%;
   width: 300%;
   background-image: url('/assets/city.png');
   background-attachment: fixed;
@@ -41,6 +41,11 @@ body div {
   to {
     transform: translateX(-2000px);
   }
+}
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
 }
 
 @media screen and (orientation:landscape) {
