@@ -2,10 +2,11 @@ const canvas = document.getElementById('canvas');
 const playArea = document.querySelector('body > div');
 // const endScreen = document.querySelector('endScreen');
 const ctx = canvas.getContext('2d');
-const score = document.getElementById('score');
+// const score = document.getElementById('score');
 canvas.width = canvas.parentElement.offsetWidth;
 canvas.height = window.innerHeight;
-let counter = 0;
+// ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+// let counter = 0;
 let bgPosX = 0;
 
 const gravity = 1.5;
@@ -51,7 +52,6 @@ class Char {
       this.velocity.y = 1;
       counter = 0;
       window.location.replace('/end');
-      // window.location.replace('/game');
     }
   }
 }
@@ -290,7 +290,6 @@ function animate() {
 
   if (scrollLimit > 3400) {
     console.log(scrollLimit);
-    // window.location.replace('/endScreen.html');
   }
 }
 junkFoods.forEach((junkFood) => {
