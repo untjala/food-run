@@ -2,7 +2,6 @@ const canvas = document.getElementById('canvas');
 const playArea = document.querySelector('body > div');
 // const endScreen = document.querySelector('endScreen');
 const ctx = canvas.getContext('2d');
-const score = document.getElementById('score');
 canvas.width = canvas.parentElement.offsetWidth;
 canvas.height = window.innerHeight;
 // ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
@@ -45,10 +44,9 @@ class Char {
     if (this.position.y + this.height + this.velocity.y <= canvas.height) {
       this.velocity.y += gravity;
       counter++;
-      // score = Math.floor(counter / 10);
+      document.getElementById('scoreSpan').textContent = Math.floor(counter / 50);
       //Otherwise, the char has reached the bottom, so velocity should be zero
     } else {
-      // score = Math.floor(counter / 100);
       this.velocity.y = 1;
       counter = 0;
       window.location.replace('/end');
