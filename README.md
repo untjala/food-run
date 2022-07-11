@@ -1,58 +1,36 @@
-# Food Run
+# TEAM 05-Group Project 2: Interactive Full-Stack Application
 
-<!-- TODO: clean up description, add visuals, credits, etc -->
+# Food run
 
-Group: Charles Young, Marquise Allen, Connor Thompson, Patrick Long, Jala Unterreiner
-Summary: Our aim is to create a runner-style platform game, Food Run, in which the player can jump and crouch to dodge obstacles and eat foods that will either increase or decrease speed.
-The player will login/create an account at the start of the game, and their score will be saved and persist upon relaunching the game. The application will be deployed on Heroku.
-This game will be created using JS, Node.js, HTML/HTML canvas, and CSS.
-Workflow:
-Jala
-1. Server-side/MVC (Charles)
-2. Front-end (Marquise)
-3. DB/seeding, front end (animation) (Connor)
-4. Back-end, vanilla JS (Patrick)
-5. Front-end
+## Table of Contents
+
+1. [Description](#description)
+2. [Resources](#resources)
+3. [Visuals](#visuals)
+4. [Author and Aknowledgement](#author-and-aknowledgements)
+
+## User Story
+
+AS someone who grew up playing 2d games,
+I WANT to be able to play a game that will also teach people to eat healthy,
+I WANT play a new game that i've never played before,
+SO THAT i can experience a whole new 2d game 
 
 
-## MVC Workflows
-- Models/controllers: Jala and Connor, Marquise (DB)
-- View: Charles, Patrick
-- Mobile Researcher: ?
+## Description
 
-## To-do list:
+This gets the user to sign in with their own account to play an enjoyable game
 
-### Foundations (group) (Finished!)
-- Create repo
-- Clone starter code
-- Swap elements
-- Config folder
-- server.js
-### Models (connor)
-- Index
-- Game
-- Player
-### Controllers (jala/connor)
-- Login/logoff
-- Authentication
-- Homepage
-- Game
-- Score
-- Game over
-### Utils
-- auth
-- Game functions
-### Public (charles)
-- Home page CSS
-- End page CSS
-- Game assets
-### Database/seeds: (marquise)
-- Dummy scores
-- foodrun_db
-- Game map (probable)
-### Views (jala, patrick)
-- Handlebars
-    - main.handlebars
-    - game.handlebars
-    - start.handlebars
-    - over-scores.handlebars
+## Resources
+
+* [Live Site]()
+
+* [Repository](https://github.com/untjala/food-run)
+
+## Visuals
+
+![Food Run]()
+
+## Authors and Acknowledgements
+
+code created & optimized by UNCC Coding Bootcamp Students - Connor Thompson, Marquise Allen, Charles Young, Patrick Long, and Jala Unterreiner
