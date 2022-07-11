@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Player } = require('../models');
 
+//finds all player info and session info
 router.get('/', async (req, res) => {
   try {
     const playerData = await Player.findAll();
@@ -18,6 +19,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+//renders game
 router.get('/game', async (req, res) => {
   try {
     res.render('game', { layout: false, loggedIn: req.session.loggedIn });
@@ -27,6 +29,7 @@ router.get('/game', async (req, res) => {
   }
 });
 
+//renders end screen
 router.get('/end', async (req, res) => {
   try {
     res.render('end', { layout: false, loggedIn: req.session.loggedIn });
@@ -36,17 +39,7 @@ router.get('/end', async (req, res) => {
   }
 });
 
-router.post('/end', async (req, res) => {
-  try {
-    const playerData = await Player.create({
-      username: req.body.username,
-    });
-    res.status(200).json(playerData);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
+//grabs a player by id and renders to index
 router.get('/:id', async (req, res) => {
   try {
     const playerData = Player.findByPk(req.session.player_id, {

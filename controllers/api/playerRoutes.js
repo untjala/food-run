@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const { Player } = require('../../models');
 
+//Creates a player and saves it to the session
 router.post('/', async (req, res) => {
   try {
-
     const playerData = await Player.create(req.body);
 
     console.log(playerData);
@@ -24,6 +24,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+//finds a players username for logging in
 router.post('/login', async (req, res) => {
   try {
     const playerData = await Player.findOne({

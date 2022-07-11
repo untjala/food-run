@@ -1,19 +1,42 @@
-body{
-    background-color: black;
+body {
+    background-color: #222;
     color: limegreen;
-    position: absolute;
-    top: 17%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Games', sans-serif;
-    font-size: 150%;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 125%;
     font-weight: bold;
 }
 
-restartButton {
+header {
+    padding-top: 25px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.character {
+    display: flex;
+    justify-content: center;
+}
+
+.card-body {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.restartButton {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 175px;
+    padding: 10px;
+    background-color: limegreen;
+    color: #222;
+    border: none;
+    cursor: pointer;
     text-decoration: none;
 }
 
- @media screen and (orientation:landscape) {
+@media screen and (orientation:landscape) {
     /* // CSS applied when the device is in landscape mode */
 }

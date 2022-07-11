@@ -4,6 +4,7 @@ const loginFormHandler = async (event) => {
   const username = document.querySelector('#username-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
+  //function for verifying if someone has entered valid login fields
   if (username && password) {
     const response = await fetch('/api/players/login', {
       method: 'POST',
@@ -26,6 +27,7 @@ const signupFormHandler = async (event) => {
   const username = document.querySelector('#username-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
 
+  //function for verifying if someone has entered valid signup fields
   if (username && password) {
     const response = await fetch('/api/players', {
       method: 'POST',

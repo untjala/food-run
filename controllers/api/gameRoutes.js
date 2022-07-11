@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Game } = require('../../models');
 
+//Creates a game and saves player info
 router.post('/', async (req, res) => {
   try {
     const gameData = await Game.create(req.body);
