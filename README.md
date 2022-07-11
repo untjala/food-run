@@ -23,13 +23,13 @@ This gets the user to sign in with their own account to play an enjoyable game
 
 ## Resources
 
-* [Live Site]()
+* [Live Site](https://pacific-everglades-44013.herokuapp.com/)
 
 * [Repository](https://github.com/untjala/food-run)
 
 ## Visuals
 
-![Food Run]()
+![Food Run](./public/img/demo.png)
 
 ## Authors and Acknowledgements
 
