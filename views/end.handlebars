@@ -6,44 +6,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EndScreen</title>
-  <link rel="stylesheet" href="/css/endStyle.css">
-  <link href="http://fonts.cdnfonts.com/css/games" rel="stylesheet">
+  <link rel="stylesheet" href="/css/endStyle.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 </head>
 
 <body>
   <section class="endScreen">
-    <div class="score-card">
-      <div class="score-card-header">
-        <p>
-        </p>
-      </div>
-      <div class="card-body">
-        <p>
-          Player:
-          {{username}}
-        </p>
-      </div>
-    </div>
-    <div>
-
-      <header>YOUR SCORE IS: 00 </header>
-      <header>GAME OVER</header>
-    </div>
-
+    <header>GAME OVER</header>
     <div class="character">
-      <img class="bottomLeft" src="/img/charCrouchpng.png" alt="player"/>
+      <img class="bottomLeft" src="/img/charCrouchpng.png" alt="player" />
+    </div>
+    <div class="card-body">
+      <p>
+        Player:
+        {{username}}
+      </p>
     </div>
 
-    <button>
-      <a class="centeredL restartButton" href="/game">Restart</a> 
+    <header>YOUR SCORE: </header>
 
-    </button>
-      
-      
-   
-
-    <button class="leaderBoard">Top Scores</button>
+    <div>
+      <a class="restartButton" href="/game">Restart</a>
+    </div>
   </section>
 </body>
 <script src="/js/index.js"></script>
+
 </html>

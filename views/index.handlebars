@@ -2,15 +2,13 @@
 
   <header class="centeredup">Food Run</header>
 
-
-
   {{#if loggedIn}}
   <!-- starting button -->
   <div class="button1">
     <a class="centeredL startButton" href="/game">START</a>
   </div>
   {{else}}
-
+  {{!-- login button --}}
   <button class="centeredR" onclick="toggleLogin()">LOGIN</button>
   {{> login}}
   {{/if}}

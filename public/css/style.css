@@ -1,11 +1,14 @@
-*, html {
+*,
+html {
   padding: 0;
   margin: 0;
 }
+
 body {
   overflow: hidden;
   height: 100vh;
 }
+
 body div {
   margin: auto;
   position: absolute;
@@ -32,12 +35,14 @@ body div {
 
 @keyframes slide {
   from {
-      transform: translateX(0);
+    transform: translateX(0);
   }
+
   to {
-      transform: translateX(-2000px);
+    transform: translateX(-2000px);
   }
 }
+
 @media screen and (orientation:landscape) {
   /* // CSS applied when the device is in landscape mode */
 }

@@ -1,9 +1,8 @@
-
-*{
-  font-family: 'Press Start 2P', cursive;
-
+* {
+    font-family: 'Press Start 2P', cursive;
 }
-header{
+
+header {
     font-size: xx-large;
     font-weight: bold;
 }
@@ -15,13 +14,13 @@ body {
     background-size: cover;
     position: relative;
     text-align: center;
- 
-  }
 
-.centeredL{
+}
+
+.centeredL {
     position: absolute;
-    top: 50%;
-    left: 45%;
+    top: 40%;
+    left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px 20px;
     font-size: 15px;
@@ -32,10 +31,11 @@ body {
     cursor: pointer;
     border-radius: 5px;
 }
-.centeredR{
+
+.centeredR {
     position: absolute;
-    top: 50%;
-    left: 55%;
+    top: 40%;
+    left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px 20px;
     font-size: 15px;
@@ -46,47 +46,34 @@ body {
     cursor: pointer;
     border-radius: 5px;
 }
-.centeredup{
+
+.centeredup {
     position: absolute;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .bottomLeft {
     position: absolute;
     bottom: 10px;
     left: 16px;
-  }
+}
 
-  /*login popup styling starts here*/
-  .startButton {
+/*login popup styling starts here*/
+.startButton {
     font-size: 15px;
     padding: 10px;
     min-width: 20px;
-    background:white ;
+    background: white;
     border: none;
-    color: limegreen;
+    color: #222;
     cursor: pointer;
     transition: 0.4s;
     text-decoration: none;
-    /* font-family: Arial, Helvetica, sans-serif; */
-  }
-  /* .close button {
-    position: absolute;
-    font-size: 15px;
-    padding: 10px;
-    min-width: 20px;
-    top: 88%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: limegreen;
-    border: none;
-    color: white;
-    cursor: pointer;
-    transition: 0.4s;
-  } */
+}
 
-  .overlay {
+.overlay {
     position: fixed;
     display: none;
     align-items: center;
@@ -96,49 +83,49 @@ body {
     background: rgba(0, 0, 0, 0.2);
     z-index: 100;
     overflow: hidden;
-  }
-  
-  .overlay.open {
+}
+
+.overlay.open {
     display: flex;
     animation: show-overlay 0.5s;
-  }
-  
-  @keyframes show-overlay {
+}
+
+@keyframes show-overlay {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  .login {
+}
+
+.login {
     padding: 50px 25px;
-    background: rgba(189,195,199);
+    background: rgba(189, 195, 199);
     border-radius: 10px;
-  }
-  
-  .header {
+}
+
+.header {
     position: relative;
-  }
-  
-  .header h1 {
+}
+
+.header h1 {
     text-align: center;
-    /* text-transform: uppercase; */
     color: black;
     padding-bottom: 7px;
     border-bottom: 2px solid whitesmoke;
-  }
-  
-  .header i {
+}
+
+.header i {
     position: absolute;
     top: 0;
     right: 0;
     font-size: 20px;
     color: black;
-  }
-  
-  .login-form .form .signup-form input {
+}
+
+.login-form .form .signup-form input {
     display: block;
     padding: 10px;
     margin: 25px 10px;
@@ -147,50 +134,53 @@ body {
     color: limegreen;
     transition: 0.4s;
     opacity: 50%;
-  }
-  
-  .login-form .form .signup-form input:focus {
+}
+
+.login-form .form .signup-form input:focus {
     border-color: #534bae;
-  }
-  
-  .footer {
+}
+
+.footer {
     position: relative;
     height: 40px;
     padding: 10px;
     width: 100%;
-  }
-  
-  .footer button {
+}
+
+.footer button {
     position: absolute;
     padding: 10px;
     min-width: 100px;
-    left: 50%;
+    left: 47%;
     transform: translateX(-50%);
-    background: rgb(27, 111, 160);
+    background: rgb(63, 185, 179);
     border: none;
     color: white;
     cursor: pointer;
     transition: 0.4s;
-  }
-  
- .sign-btn {
-  
-  padding: 50px;
-  color: limegreen;
- }
- .end-btn {
-  padding: 50px;
-  
- }
-  .footer button:hover {
-    background: #534bae;
-  }
+}
 
-  .close button:hover {
-    background: #534bae;
-  }
-  
+.exit-btn {
+    position: absolute;
+    padding: 10px;
+    min-width: 100px;
+    left: 49%;
+    transform: translateX(-50%);
+    background: rgb(63, 185, 179);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
 
-  @media screen and (orientation:landscape) {
+.footer button:hover {
+    background: #534bae;
+}
+
+.close button:hover {
+    background: #534bae;
+}
+
+@media screen and (orientation:landscape) {
     /* // CSS applied when the device is in landscape mode */
 }
