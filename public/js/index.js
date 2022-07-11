@@ -2,11 +2,11 @@ const canvas = document.getElementById('canvas');
 const playArea = document.querySelector('body > div');
 // const endScreen = document.querySelector('endScreen');
 const ctx = canvas.getContext('2d');
-// const score = document.getElementById('score');
+const score = document.getElementById('score');
 canvas.width = canvas.parentElement.offsetWidth;
 canvas.height = window.innerHeight;
 // ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-// let counter = 0;
+let counter = 0;
 let bgPosX = 0;
 
 const gravity = 1.5;
